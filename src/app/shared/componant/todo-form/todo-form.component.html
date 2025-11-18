@@ -1,0 +1,23 @@
+<form #todoform="ngForm" (ngSubmit)="ontodoadd(todoform)">
+  <div class="form-group">
+    <label for="todoitem">Todo Item</label>
+    <input
+      type="text"
+      class="form-control"
+      id="todoitem"
+      name="todoitem"
+      ngModel
+      name="todoitem"
+      required
+    />
+  </div>
+
+  <button
+    type="submit"
+    [disabled]="todoform.invalid"
+    class="btn btn-sm btn-block btn-primary"
+    type="submit"
+  >
+    Add Todo
+  </button>
+</form>
